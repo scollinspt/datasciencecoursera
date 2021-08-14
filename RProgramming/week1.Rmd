@@ -1,0 +1,60 @@
+---
+title: "Week 1 of R Programming"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Types - R Objects
+atomic (basic) classes of objects: character, numeric, integer, complex, logical
+
+# Data Types - Vectors and lists
+
+## Creating vectors
+Vectors will be coerced to the atomic class that is the least common demoninatory (i.e. if numeric and character you'll get a character vector)
+
+```{r}
+
+x<- c(0.5, 0.6)
+y<- 9:29
+z<- c(5, TRUE, "hello") # Coercion - 
+
+#Explicit coercion
+
+x<- 0:6
+class(x)
+as.numeric(x)
+class(x)
+as.logical(x)
+as.character(x)
+
+```
+
+# Lists
+Every object can be a different type of class
+
+Elements are indexed with [[]]
+
+# Matrices
+Special type of vector (not a specific class) vectors with a dimension attribute
+
+```{r}
+m <- matrix(nrow = 2, ncol = 3)
+m <- matrix(1:6, nrow = 2, ncol = 3)
+n<- 1:10
+dim(n) <- c(2,5)
+
+x <- 1:3
+y <- 10:12
+cbind(x,y)
+rbind(x,y)
+```
+# Factors - 
+Special vector that represents categorical data
+
+Ordered or unordered 
+
+
+
