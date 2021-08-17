@@ -5,6 +5,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
 ```
 
 # Data Types - R Objects
@@ -56,5 +57,11 @@ Special vector that represents categorical data
 
 Ordered or unordered 
 
+```{r}
+data<-read.csv("hw1_data.csv")
+```
 
+```{r}
+summary(data)
+```
 
